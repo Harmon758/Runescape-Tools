@@ -19,6 +19,10 @@ h1 {
 	font-family: "trajan-pro-3";
 }
 
+table {
+	float: left;
+}
+
 th {
 	color: #e1bb34;
 	font-family: "trajan-pro-3";
