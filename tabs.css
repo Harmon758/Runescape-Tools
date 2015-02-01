@@ -25,7 +25,7 @@
             background:#B2B2B2;
             font-size:16px;
             font-weight:600;
-            color:#4c4c4c;
+            color:#000000;
             transition:all linear 0.15s;
         }
  
@@ -35,8 +35,8 @@
         }
  
     li.active a, li.active a:hover {
-        background:#000000;
-        color:#4c4c4c;
+        background:#666666;
+        color:#000000;
     }
  
     /*----- Content of Tabs -----*/
