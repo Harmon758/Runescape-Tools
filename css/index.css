@@ -1,7 +1,11 @@
-/* Colors:
-RS Light Blue: #b2dbee
-RS Yellow: #e1bb34
-RS Gray: #a9acad */
+/* RS Colors:
+Light Blue: #b2dbee
+Yellow: #e1bb34
+Gray: #a9acad 
+
+RS Fonts:
+"MuseoSans500"
+"trajan-pro-3" */
 
 body {
 	background-image: url("../images/background-main.jpg");

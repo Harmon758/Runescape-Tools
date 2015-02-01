@@ -26,11 +26,12 @@
             font-weight:600;
             color:#000000;
             transition:all linear 0.15s;
+			text-decoration: none;
         }
  
         .tab-links a:hover {
             /*background:#a7cce5;*/
-            text-decoration:none;
+            text-decoration: underline;
         }
  
     li.active a, li.active a:hover {
