@@ -8,7 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" type="text/css" href="css/tabs.css">
 	<link rel="stylesheet" type="text/css" href="css/checkboxes.css">
-	<script type="text/javascript" src="js/tabs.js" ></script>
+	<script src="js/tabs.js" ></script>
+	<script src="js/VOS.js" ></script>
 </head>
 <body>
 	<h1>Runescape Tools</h1>
@@ -25,6 +26,7 @@
 				<table>
 					<tr>
 						<th>Noticed?</th>
+						<th>VOS</th>
 						<th>Clan</th>
 						<th>Level</th>
 						<th>Location</th>
@@ -32,59 +34,67 @@
 					</tr>
 					<tr>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Iorwerth"></td>
+						<td style="text-align:center;"><input type="checkbox" name="clan" value="Iorwerth" id="Iorwerth_VOS_Checkbox" onchange="VOS(this)"></td>
 						<td>Iorwerth</td> 
 						<td style="text-align:center;">91</td>
 						<td>SSW</td>
-						<td>125</td>
+						<td id="Iorwerth_XP">125</td>
 					</tr>
 					<tr>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Ithell"></td>
+						<td style="text-align:center;"><input type="checkbox" name="clan" value="Ithell" id="Ithell_VOS_Checkbox" onchange="VOS(this)"></td>
 						<td>Ithell</td> 
 						<td style="text-align:center;">92</td>
 						<td>WSW</td>
-						<td>130</td>
+						<td id="Ithell_XP">130</td>
 					</tr>
 					<tr>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Cadarn"></td>
+						<td style="text-align:center;"><input type="checkbox" name="clan" value="Cadarn" id="Cadarn_VOS_Checkbox" onchange="VOS(this)"></td>
 						<td>Cadarn</td> 
 						<td style="text-align:center;">93</td>
 						<td>ESE</td>
-						<td>135</td>
+						<td id="Cadarn_XP">135</td>
 					</tr>
 					<tr>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Amlodd"></td>
+						<td style="text-align:center;"><input type="checkbox" name="clan" value="Amlodd" id="Amlodd_VOS_Checkbox" onchange="VOS(this)"></td>
 						<td>Amlodd</td> 
 						<td style="text-align:center;">94</td>
 						<td>WNW</td>
-						<td>140</td>
+						<td id="Amlodd_XP">140</td>
 					</tr>
 					<tr>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Trahaearn"></td>
+						<td style="text-align:center;"><input type="checkbox" name="clan" value="Trahaearn" id="Trahaearn_VOS_Checkbox" onchange="VOS(this)"></td>
 						<td>Trahaearn</td> 
 						<td style="text-align:center;">95</td>
 						<td>SSE</td>
-						<td>145</td>
+						<td id="Trahaearn_XP">145</td>
 					</tr>
 					<tr>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Hefin"></td>
+						<td style="text-align:center;"><input type="checkbox" name="clan" value="Hefin" id="Hefin_VOS_Checkbox" onchange="VOS(this)"></td>
 						<td>Hefin</td> 
 						<td style="text-align:center;">96</td>
 						<td>NNW</td>
-						<td>150</td>
+						<td id="Hefin_XP">150</td>
 					</tr>
 					<tr>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Crwys"></td>
+						<td style="text-align:center;"><input type="checkbox" name="clan" value="Crwys" id="Crwys_VOS_Checkbox" onchange="VOS(this)"></td>
 						<td>Crwys</td> 
 						<td style="text-align:center;">97</td>
 						<td>ENE</td>
-						<td>155</td>
+						<td id="Crwys_XP">155</td>
 					</tr>
 					<tr>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Meilyr"></td>
+						<td style="text-align:center;"><input type="checkbox" name="clan" value="Meilyr" id="Meilyr_VOS_Checkbox" onchange="VOS(this)"></td>
 						<td>Meilyr</td> 
 						<td style="text-align:center;">98</td>
 						<td>NNE</td>
-						<td>170</td>
+						<td id="Meilyr_XP">170</td>
 					</tr>
 				</table>
 				<img src="images/Prifddinas_Clan_Map.png" alt="Prifddinas Clan Map" style="float:right;width:500px;padding-left:20px">
@@ -115,6 +125,9 @@
 					<li>Fancy Buttons</li>
 					<li>VOS Function</li>
 					<li>Timers</li>
+					<li>Interactive Map</li>
+					<li>Ibis Option</li>
+					<li>Sort By XP</li>
 				</ul>
 			</div>
 
