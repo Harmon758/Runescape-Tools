@@ -2,6 +2,7 @@
 <html>
 <body>
 	<link rel="stylesheet" type="text/css" href="tabs.css">
+	<link rel="stylesheet" type="text/css" href="checkboxes.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="tabs.js" type="text/javascript"></script>
 	<h1>Runescape Tools</h1>
@@ -16,8 +17,78 @@
 	 
 		<div class="tab-content">
 			<div id="tab1" class="tab active">
-				<p>Tab #1 content goes here!</p>
-				<p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum risus ornare mollis.</p>
+				<!--<p>
+					91 - Iorwerth <br>
+					92 - Ithell <br>
+					93 - Cadarn <br>
+					94 - Amlodd <br>
+					95 - Trahaearn <br>
+					96 - Hefin <br>
+					97 - Crwys <br>
+					98 - Meilyr <br>
+				</p>-->
+				<table>
+					<tr>
+						<th>Noticed?</th>
+						<th>Clan</th> 
+						<th>Level</th>
+					</tr>
+					<tr>
+						<td style="text-align:center;"><input type="checkbox" name="clan" value="Iorwerth"></td>
+						<td>Iorwerth</td> 
+						<td style="text-align:center;">91</td>
+					</tr>
+					<tr>
+						<td style="text-align:center;"><input type="checkbox" name="clan" value="Ithell"></td>
+						<td>Ithell</td> 
+						<td style="text-align:center;">92</td>
+					</tr>
+					<tr>
+						<td style="text-align:center;"><input type="checkbox" name="clan" value="Cadarn"></td>
+						<td>Cadarn</td> 
+						<td style="text-align:center;">93</td>
+					</tr>
+					<tr>
+						<td style="text-align:center;"><input type="checkbox" name="clan" value="Amlodd"></td>
+						<td>Amlodd</td> 
+						<td style="text-align:center;">94</td>
+					</tr>
+					<tr>
+						<td style="text-align:center;"><input type="checkbox" name="clan" value="Trahaearn"></td>
+						<td>Trahaearn</td> 
+						<td style="text-align:center;">95</td>
+					</tr>
+					<tr>
+						<td style="text-align:center;"><input type="checkbox" name="clan" value="Hefin"></td>
+						<td>Hefin</td> 
+						<td style="text-align:center;">96</td>
+					</tr>
+					<tr>
+						<td style="text-align:center;"><input type="checkbox" name="clan" value="Crwys"></td>
+						<td>Crwys</td> 
+						<td style="text-align:center;">97</td>
+					</tr>
+					<tr>
+						<td style="text-align:center;"><input type="checkbox" name="clan" value="Meilyr"></td>
+						<td>Meilyr</td> 
+						<td style="text-align:center;">98</td>
+					</tr>
+				</table>
+				<!--<form action="">
+					<input type="checkbox" name="clan" value="Iorwerth"> 91 - Iorwerth <br>
+					<input type="checkbox" name="clan" value="Ithell"> 92 - Ithell <br>
+					<input type="checkbox" name="clan" value="Cadarn"> 93 - Cadarn <br>
+					<input type="checkbox" name="clan" value="Amlodd"> 94 - Amlodd <br>
+					<input type="checkbox" name="clan" value="Trahaearn"> 95 - Trahaearn <br>
+					<input type="checkbox" name="clan" value="Hefin"> 96 - Hefin <br>
+					<input type="checkbox" name="clan" value="Crwys"> 97 - Crwys <br>
+					<input type="checkbox" name="clan" value="Meilyr"> 98 - Meilyr <br>
+				</form>-->
+				<!-- Rounded ONE
+				<div class="roundedOne">
+					<input type="checkbox" value="None" id="roundedOne" name="check" />
+					<label for="roundedOne"></label>
+				</div>-->
 			</div>
 	 
 			<div id="tab2" class="tab">
