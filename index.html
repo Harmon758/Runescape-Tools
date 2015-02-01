@@ -29,75 +29,83 @@
 						<th>VOS</th>
 						<th>Clan</th>
 						<th>Level</th>
-						<th>Location</th>
 						<th>XP</th>
+						<th>Location</th>
 					</tr>
 					<tr>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Iorwerth"></td>
+						<!--<td style="text-align:center;"><div class="roundedOne"><input type="checkbox" name="clan" value="Iorwerth" id="roundedOne"><label for="roundedOne"></label></div></td>-->
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Iorwerth" id="Iorwerth_VOS_Checkbox" onchange="VOS(this)"></td>
 						<td>Iorwerth</td> 
 						<td style="text-align:center;">91</td>
+						<td id="Iorwerth_XP">125.0</td>
 						<td>SSW</td>
-						<td id="Iorwerth_XP">125</td>
 					</tr>
 					<tr>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Ithell"></td>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Ithell" id="Ithell_VOS_Checkbox" onchange="VOS(this)"></td>
 						<td>Ithell</td> 
 						<td style="text-align:center;">92</td>
+						<td id="Ithell_XP">130.0</td>
 						<td>WSW</td>
-						<td id="Ithell_XP">130</td>
 					</tr>
 					<tr>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Cadarn"></td>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Cadarn" id="Cadarn_VOS_Checkbox" onchange="VOS(this)"></td>
 						<td>Cadarn</td> 
 						<td style="text-align:center;">93</td>
+						<td id="Cadarn_XP">135.0</td>
 						<td>ESE</td>
-						<td id="Cadarn_XP">135</td>
 					</tr>
 					<tr>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Amlodd"></td>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Amlodd" id="Amlodd_VOS_Checkbox" onchange="VOS(this)"></td>
 						<td>Amlodd</td> 
 						<td style="text-align:center;">94</td>
+						<td id="Amlodd_XP">140.0</td>
 						<td>WNW</td>
-						<td id="Amlodd_XP">140</td>
 					</tr>
 					<tr>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Trahaearn"></td>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Trahaearn" id="Trahaearn_VOS_Checkbox" onchange="VOS(this)"></td>
 						<td>Trahaearn</td> 
 						<td style="text-align:center;">95</td>
+						<td id="Trahaearn_XP">145.0</td>
 						<td>SSE</td>
-						<td id="Trahaearn_XP">145</td>
 					</tr>
 					<tr>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Hefin"></td>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Hefin" id="Hefin_VOS_Checkbox" onchange="VOS(this)"></td>
 						<td>Hefin</td> 
 						<td style="text-align:center;">96</td>
+						<td id="Hefin_XP">150.0</td>
 						<td>NNW</td>
-						<td id="Hefin_XP">150</td>
 					</tr>
 					<tr>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Crwys"></td>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Crwys" id="Crwys_VOS_Checkbox" onchange="VOS(this)"></td>
 						<td>Crwys</td> 
 						<td style="text-align:center;">97</td>
+						<td id="Crwys_XP">155.0</td>
 						<td>ENE</td>
-						<td id="Crwys_XP">155</td>
 					</tr>
 					<tr>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Meilyr"></td>
 						<td style="text-align:center;"><input type="checkbox" name="clan" value="Meilyr" id="Meilyr_VOS_Checkbox" onchange="VOS(this)"></td>
 						<td>Meilyr</td> 
 						<td style="text-align:center;">98</td>
+						<td id="Meilyr_XP">170.0</td>
 						<td>NNE</td>
-						<td id="Meilyr_XP">170</td>
 					</tr>
 				</table>
-				<img src="images/Prifddinas_Clan_Map.png" alt="Prifddinas Clan Map" style="float:right;width:500px;padding-left:20px">
+				<img src="images/Prifddinas_Clan_Map.png" alt="Prifddinas Clan Map" style="float:right;width:500px;padding-left:20px"><br>
+				<select id="Ibis_Pieces" onchange="Ibis()">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select> Ibis Pieces
 				<a href="http://runescape.wikia.com/wiki/Pickpocket#Prifddinas_Training" style="position:absolute;left:20px;top:630px">RS Wiki</a>
 				<!-- add VOS xp -->
 				<!-- Rounded ONE
@@ -122,12 +130,13 @@
 					<li style="text-decoration:line-through">Checkboxes</li>
 					<li style="text-decoration:line-through">Labeled Map</li>
 					<li style="text-decoration:line-through">RS Wiki Link</li>
+					<li style="text-decoration:line-through">VOS Function</li>
 					<li>Fancy Buttons</li>
-					<li>VOS Function</li>
 					<li>Timers</li>
 					<li>Interactive Map</li>
 					<li>Ibis Option</li>
 					<li>Sort By XP</li>
+					<li>Ava Option</li>
 				</ul>
 			</div>
 
