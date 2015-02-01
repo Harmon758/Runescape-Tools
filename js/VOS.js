@@ -8,7 +8,7 @@ function Recalculate_XP(){
 	var Crwys_XP = document.getElementById("Crwys_XP");
 	var Meilyr_XP = document.getElementById("Meilyr_XP");
 	var Ibis_Pieces = document.getElementById("Ibis_Pieces").value;
-	var Ava_Multiplier = 1 + document.getElementById("Ava").value / 100;
+	var Ava_Multiplier = 1 + document.getElementById("Clan_Avatar").value / 100;
 	if(Ibis_Pieces == 4){
 		var VOS_Multiplier = 1.05
 	}else{
