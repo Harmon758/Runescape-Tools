@@ -1,0 +1,18 @@
+/* Colors:
+RS Light Blue: #b2dbee
+RS Yellow: #e1bb34
+RS Gray: #a9acad */
+
+body {
+	background-image: url("../images/background-main.jpg");
+	color: #a9acad;
+}
+
+th {
+	color: #e1bb34;
+}
+
+th,td {
+    padding-left: 8px;
+	padding-right: 8px;
+}
