@@ -6,15 +6,18 @@ RS Gray: #a9acad */
 body {
 	background-image: url("../images/background-main.jpg");
 	color: #a9acad;
+	font-family: "MuseoSans500";
 }
 
 h1 {
 	color: #b2dbee;
-	margin: 15px;
+	margin: 10px;
+	font-family: "trajan-pro-3";
 }
 
 th {
 	color: #e1bb34;
+	font-family: "trajan-pro-3";
 }
 
 th,td {
