@@ -21,6 +21,7 @@ h1 {
 
 table {
 	float: left;
+	padding-bottom: 10px;
 }
 
 th {
