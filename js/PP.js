@@ -53,4 +53,24 @@ function Clear_Noticed(){
 	document.getElementById("Hefin_Noticed_Checkbox").checked = false;
 	document.getElementById("Crwys_Noticed_Checkbox").checked = false;
 	document.getElementById("Meilyr_Noticed_Checkbox").checked = false;
+	Update_Iorwerth_Noticed_Timer();
+	Update_Ithell_Noticed_Timer();
+}
+
+function Update_Iorwerth_Noticed_Timer(){
+	if(document.getElementById("Iorwerth_Noticed_Checkbox").checked == true){
+		CreateTimer("Iorwerth_Noticed_Timer", 1200);
+	}else{
+		StopTimer("Iorwerth_Noticed_Timer");
+		document.getElementById("Iorwerth_Noticed_Timer").innerHTML = "00:00";
+	}
+}
+
+function Update_Ithell_Noticed_Timer(){
+	if(document.getElementById("Ithell_Noticed_Checkbox").checked == true){
+		CreateTimer("Ithell_Noticed_Timer", 1200);
+	}else{
+		StopTimer("Ithell_Noticed_Timer");
+		document.getElementById("Ithell_Noticed_Timer").innerHTML = "00:00";
+	}
 }
