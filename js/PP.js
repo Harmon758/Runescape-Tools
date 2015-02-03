@@ -42,6 +42,7 @@ function Clear_VOS(){
 	document.getElementById("Hefin_VOS_Checkbox").checked = false;
 	document.getElementById("Crwys_VOS_Checkbox").checked = false;
 	document.getElementById("Meilyr_VOS_Checkbox").checked = false;
+	Recalculate_XP();
 }
 
 function Clear_Noticed(){
