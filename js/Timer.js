@@ -16,6 +16,8 @@ function UpdateTimer(TimerID, Time){
 	if(Seconds <= 0){
 		clearInterval(window[TimerID]);
 		Timer.style.color = "green";
+		var Clan_Notification = "Clan " + TimerID.split("_")[0] + " has forgotten about your pickpocketing.<br>";
+		document.getElementById("Notifications").innerHTML += Clan_Notification;
 	}
 	/*
 	var Days = Math.floor(Seconds / 86400);
