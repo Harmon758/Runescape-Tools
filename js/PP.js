@@ -115,7 +115,7 @@ function Update_Noticed_Timer(Clan){
 	Save_Session();
 }
 
-function Load_Saved(){
+function Load_Session(){
 	if(localStorage.getItem("Ibis_Pieces") != null){ document.getElementById("Ibis_Pieces").value = localStorage.getItem("Ibis_Pieces"); }
 	if(localStorage.getItem("Clan_Avatar") != null){ document.getElementById("Clan_Avatar").value = localStorage.getItem("Clan_Avatar"); }
 	if(localStorage.getItem("Iorwerth_VOS_Checkbox") != null){ document.getElementById("Iorwerth_VOS_Checkbox").checked = (localStorage.getItem("Iorwerth_VOS_Checkbox") === "true"); }
@@ -145,4 +145,5 @@ function Load_Saved(){
 	if(localStorage.getItem("Crwys_Noticed_Checkbox") != null){ document.getElementById("Crwys_Noticed_Checkbox").checked = (localStorage.getItem("Crwys_Noticed_Checkbox") === "true"); }
 	if(localStorage.getItem("Meilyr_Noticed_Checkbox") != null){ document.getElementById("Meilyr_Noticed_Checkbox").checked = (localStorage.getItem("Meilyr_Noticed_Checkbox") === "true"); }
 	if(localStorage.getItem("Notifications") != null){ document.getElementById("Notifications").innerHTML = localStorage.getItem("Notifications"); }
+	document.getElementById("Notifications").scrollTop = document.getElementById("Notifications").scrollHeight;
 }
