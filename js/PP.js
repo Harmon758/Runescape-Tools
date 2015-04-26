@@ -9,6 +9,7 @@ function Recalculate_XP(){
 	var Meilyr_XP = document.getElementById("Meilyr_XP");
 	var Ibis_Pieces = document.getElementById("Ibis_Pieces").value;
 	var Ava_Multiplier = 1 + document.getElementById("Clan_Avatar").value / 100;
+	var VOS_Checked = 0;
 	if(Ibis_Pieces == 4){
 		var VOS_Multiplier = 1.05
 	}else{
@@ -22,15 +23,16 @@ function Recalculate_XP(){
 	Hefin_XP.innerHTML = (Math.floor(1500 * VOS_Multiplier * Ava_Multiplier) / 10).toFixed(1);
 	Crwys_XP.innerHTML = (Math.floor(1550 * VOS_Multiplier * Ava_Multiplier) / 10).toFixed(1);
 	Meilyr_XP.innerHTML = (Math.floor(1700 * VOS_Multiplier * Ava_Multiplier) / 10).toFixed(1);
-	if(document.getElementById("Iorwerth_VOS_Checkbox").checked){ Iorwerth_XP.innerHTML = (Math.round(Iorwerth_XP.innerHTML * 12) / 10).toFixed(1); }
-	if(document.getElementById("Ithell_VOS_Checkbox").checked){ Ithell_XP.innerHTML = (Math.round(Ithell_XP.innerHTML * 12) / 10).toFixed(1); }
-	if(document.getElementById("Cadarn_VOS_Checkbox").checked){ Cadarn_XP.innerHTML = (Math.round(Cadarn_XP.innerHTML * 12) / 10).toFixed(1); }
-	if(document.getElementById("Amlodd_VOS_Checkbox").checked){ Amlodd_XP.innerHTML = (Math.round(Amlodd_XP.innerHTML * 12) / 10).toFixed(1); }
-	if(document.getElementById("Trahaearn_VOS_Checkbox").checked){ Trahaearn_XP.innerHTML = (Math.round(Trahaearn_XP.innerHTML * 12) / 10).toFixed(1); }
-	if(document.getElementById("Hefin_VOS_Checkbox").checked){ Hefin_XP.innerHTML = (Math.round(Hefin_XP.innerHTML * 12) / 10).toFixed(1); }
-	if(document.getElementById("Crwys_VOS_Checkbox").checked){ Crwys_XP.innerHTML = (Math.round(Crwys_XP.innerHTML * 12) / 10).toFixed(1); }
-	if(document.getElementById("Meilyr_VOS_Checkbox").checked){ Meilyr_XP.innerHTML = (Math.round(Meilyr_XP.innerHTML * 12) / 10).toFixed(1); }
-	// Count
+	if(document.getElementById("Iorwerth_VOS_Checkbox").checked){ Iorwerth_XP.innerHTML = (Math.round(Iorwerth_XP.innerHTML * 12) / 10).toFixed(1); VOS_Checked++; }
+	if(document.getElementById("Ithell_VOS_Checkbox").checked){ Ithell_XP.innerHTML = (Math.round(Ithell_XP.innerHTML * 12) / 10).toFixed(1); VOS_Checked++; }
+	if(document.getElementById("Cadarn_VOS_Checkbox").checked){ Cadarn_XP.innerHTML = (Math.round(Cadarn_XP.innerHTML * 12) / 10).toFixed(1); VOS_Checked++; }
+	if(document.getElementById("Amlodd_VOS_Checkbox").checked){ Amlodd_XP.innerHTML = (Math.round(Amlodd_XP.innerHTML * 12) / 10).toFixed(1); VOS_Checked++; }
+	if(document.getElementById("Trahaearn_VOS_Checkbox").checked){ Trahaearn_XP.innerHTML = (Math.round(Trahaearn_XP.innerHTML * 12) / 10).toFixed(1); VOS_Checked++; }
+	if(document.getElementById("Hefin_VOS_Checkbox").checked){ Hefin_XP.innerHTML = (Math.round(Hefin_XP.innerHTML * 12) / 10).toFixed(1); VOS_Checked++; }
+	if(document.getElementById("Crwys_VOS_Checkbox").checked){ Crwys_XP.innerHTML = (Math.round(Crwys_XP.innerHTML * 12) / 10).toFixed(1); VOS_Checked++; }
+	if(document.getElementById("Meilyr_VOS_Checkbox").checked){ Meilyr_XP.innerHTML = (Math.round(Meilyr_XP.innerHTML * 12) / 10).toFixed(1); VOS_Checked++; }
+	if(VOS_Checked > 2){ document.getElementById("VOS_Notification").innerHTML = "You have more than 2 VOS's checked"; }
+	else{ document.getElementById("VOS_Notification").innerHTML = ""; }
 }
 
 function Clear_VOS(){
