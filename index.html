@@ -12,7 +12,7 @@
 	<script src="js/PP.js" ></script>
 	<script src="js/Timer.js" ></script>
 </head>
-<body>
+<body onload ="Load_Saved()">
 	<h1>Runescape Tools</h1>
 	<div class="tabs">
 		<ul class="tab-links">
@@ -135,7 +135,7 @@
 				<button onclick="Clear_Noticed()">Clear Noticed</button><br><br>
 				<button onclick="Clear_VOS()">Clear VOS</button><br><br>
 				<button onclick="Clear_Notifications()">Clear Notifications</button><br><br>
-				Automatically <br> Uncheck Noticed: <input type="checkbox" id="Uncheck_Noticed">
+				Automatically <br> Uncheck Noticed: <input type="checkbox" id="Uncheck_Noticed" onchange="Save_Session()">
 				<div style="position:absolute;left:210px;top:390px;max-height:210px;overflow:hidden" id="Notifications"></div>
 				<div style="position:absolute;left:210px;top:610px;overflow:hidden" id="VOS_Notification"></div>
 				<a href="http://runescape.wikia.com/wiki/Pickpocket#Prifddinas_Training" style="position:absolute;left:20px;top:630px">RS Wiki</a>
