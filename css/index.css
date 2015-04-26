@@ -11,6 +11,8 @@ body {
 	background-image: url("../images/background-main.jpg");
 	color: #a9acad;
 	font-family: "MuseoSans500";
+	width: 1300px;
+	overflow: visible;
 }
 
 h1 {
