@@ -17,7 +17,8 @@ function UpdateTimer(TimerID, Time){
 		clearInterval(window[TimerID]);
 		Timer.style.color = "green";
 		var Clan = TimerID.split("_")[0]
-		var Clan_Notification = "Clan " + Clan + " has forgotten about your pickpocketing.<br>";
+		var time = new Date();
+		var Clan_Notification = "[" + ("0" + time.getHours()).slice(-2) + ":" + ("0" + time.getMinutes()).slice(-2) + ":" + ("0" + time.getSeconds()).slice(-2) + "] " + "Clan " + Clan + " has forgotten about your pickpocketing.<br>";
 		document.getElementById("Notifications").innerHTML += Clan_Notification;
 		document.getElementById("Notifications").scrollTop = document.getElementById("Notifications").scrollHeight;
 		if(document.getElementById("Uncheck_Noticed").checked){ document.getElementById(Clan + "_Noticed_Checkbox").checked = false; }
