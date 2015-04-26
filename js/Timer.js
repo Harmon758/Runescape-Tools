@@ -22,6 +22,7 @@ function UpdateTimer(TimerID, Time){
 		document.getElementById("Notifications").innerHTML += Clan_Notification;
 		document.getElementById("Notifications").scrollTop = document.getElementById("Notifications").scrollHeight;
 		if(document.getElementById("Uncheck_Noticed").checked){ document.getElementById(Clan + "_Noticed_Checkbox").checked = false; }
+		localStorage.setItem("Notifications", document.getElementById("Notifications").innerHTML);
 	}
 	/*
 	var Days = Math.floor(Seconds / 86400);

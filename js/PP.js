@@ -101,6 +101,7 @@ function Clear_Noticed(){
 
 function Clear_Notifications(){
 	document.getElementById("Notifications").innerHTML = "";
+	localStorage.setItem("Notifications", document.getElementById("Notifications").innerHTML);
 }
 
 function Update_Noticed_Timer(Clan){
@@ -143,4 +144,5 @@ function Load_Saved(){
 	if(localStorage.getItem("Hefin_Noticed_Checkbox") != null){ document.getElementById("Hefin_Noticed_Checkbox").checked = (localStorage.getItem("Hefin_Noticed_Checkbox") === "true"); }
 	if(localStorage.getItem("Crwys_Noticed_Checkbox") != null){ document.getElementById("Crwys_Noticed_Checkbox").checked = (localStorage.getItem("Crwys_Noticed_Checkbox") === "true"); }
 	if(localStorage.getItem("Meilyr_Noticed_Checkbox") != null){ document.getElementById("Meilyr_Noticed_Checkbox").checked = (localStorage.getItem("Meilyr_Noticed_Checkbox") === "true"); }
+	if(localStorage.getItem("Notifications") != null){ document.getElementById("Notifications").innerHTML = localStorage.getItem("Notifications"); }
 }
