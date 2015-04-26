@@ -16,9 +16,11 @@ function UpdateTimer(TimerID, Time){
 	if(Seconds <= 0){
 		clearInterval(window[TimerID]);
 		Timer.style.color = "green";
-		var Clan_Notification = "Clan " + TimerID.split("_")[0] + " has forgotten about your pickpocketing.<br>";
+		var Clan = TimerID.split("_")[0]
+		var Clan_Notification = "Clan " + Clan + " has forgotten about your pickpocketing.<br>";
 		document.getElementById("Notifications").innerHTML += Clan_Notification;
 		document.getElementById("Notifications").scrollTop = document.getElementById("Notifications").scrollHeight;
+		if(document.getElementById("Uncheck_Noticed").checked){ document.getElementById(Clan + "_Noticed_Checkbox").checked = false; }
 	}
 	/*
 	var Days = Math.floor(Seconds / 86400);

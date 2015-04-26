@@ -71,7 +71,7 @@ function Clear_Notifications(){
 }
 
 function Update_Noticed_Timer(Clan){
-	if(document.getElementById(Clan.value + "_Noticed_Checkbox").checked == true){
+	if(document.getElementById(Clan.value + "_Noticed_Checkbox").checked){
 		CreateTimer(Clan.value + "_Noticed_Timer", 5);
 	}else{
 		StopTimer(Clan.value + "_Noticed_Timer");
