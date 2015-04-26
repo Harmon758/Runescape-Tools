@@ -70,5 +70,6 @@ function Update_Noticed_Timer(Clan){
 	}else{
 		StopTimer(Clan.value + "_Noticed_Timer");
 		document.getElementById(Clan.value + "_Noticed_Timer").innerHTML = "00:00";
+		document.getElementById(Clan.value + "_Noticed_Timer").style.color = "green";
 	}
 }

@@ -12,8 +12,10 @@ function UpdateTimer(TimerID, Time){
 		var Seconds = parseInt(Current_Time[0]) * 60 + parseInt(Current_Time[1]);
 	}
 	Seconds -= 1;
+	Timer.style.color = "red";
 	if(Seconds <= 0){
 		clearInterval(window[TimerID]);
+		Timer.style.color = "green";
 	}
 	/*
 	var Days = Math.floor(Seconds / 86400);
