@@ -64,6 +64,10 @@ function Clear_Noticed(){
 	Update_Noticed_Timer(document.getElementById("Meilyr_Noticed_Checkbox"));
 }
 
+function Clear_Notifications(){
+	document.getElementById("Notifications").innerHTML = "";
+}
+
 function Update_Noticed_Timer(Clan){
 	if(document.getElementById(Clan.value + "_Noticed_Checkbox").checked == true){
 		CreateTimer(Clan.value + "_Noticed_Timer", 1200);

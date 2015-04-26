@@ -18,6 +18,7 @@ function UpdateTimer(TimerID, Time){
 		Timer.style.color = "green";
 		var Clan_Notification = "Clan " + TimerID.split("_")[0] + " has forgotten about your pickpocketing.<br>";
 		document.getElementById("Notifications").innerHTML += Clan_Notification;
+		document.getElementById("Notifications").scrollTop = document.getElementById("Notifications").scrollHeight;
 	}
 	/*
 	var Days = Math.floor(Seconds / 86400);
