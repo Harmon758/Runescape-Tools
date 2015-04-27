@@ -35,6 +35,7 @@ function UpdateTimer(TimerID, Time){
 	//var TimeStr = ((Days > 0) ? Days + " days " : "") + LeadingZero(Hours) + ":" + LeadingZero(Minutes) + ":" + LeadingZero(Seconds)
 	var TimeStr = LeadingZero(Minutes) + ":" + LeadingZero(Seconds)
 	Timer.innerHTML = TimeStr;
+	localStorage.setItem(TimerID, Timer.innerHTML);
 }
 
 function StopTimer(TimerID){

@@ -106,11 +106,12 @@ function Clear_Notifications(){
 
 function Update_Noticed_Timer(Clan){
 	if(document.getElementById(Clan.value + "_Noticed_Checkbox").checked){
-		CreateTimer(Clan.value + "_Noticed_Timer", 5);
+		CreateTimer(Clan.value + "_Noticed_Timer", 1200);
 	}else{
 		StopTimer(Clan.value + "_Noticed_Timer");
 		document.getElementById(Clan.value + "_Noticed_Timer").innerHTML = "00:00";
 		document.getElementById(Clan.value + "_Noticed_Timer").style.color = "green";
+		localStorage.setItem(Clan.value + "_Noticed_Timer", "00:00");
 	}
 	Save_Session();
 }
@@ -146,4 +147,20 @@ function Load_Session(){
 	if(localStorage.getItem("Meilyr_Noticed_Checkbox") != null){ document.getElementById("Meilyr_Noticed_Checkbox").checked = (localStorage.getItem("Meilyr_Noticed_Checkbox") === "true"); }
 	if(localStorage.getItem("Notifications") != null){ document.getElementById("Notifications").innerHTML = localStorage.getItem("Notifications"); }
 	document.getElementById("Notifications").scrollTop = document.getElementById("Notifications").scrollHeight;
+	if(localStorage.getItem("Iorwerth_Noticed_Timer") != null){ document.getElementById("Iorwerth_Noticed_Timer").innerHTML = localStorage.getItem("Iorwerth_Noticed_Timer"); }
+	if(localStorage.getItem("Ithell_Noticed_Timer") != null){ document.getElementById("Ithell_Noticed_Timer").innerHTML = localStorage.getItem("Ithell_Noticed_Timer"); }
+	if(localStorage.getItem("Cadarn_Noticed_Timer") != null){ document.getElementById("Cadarn_Noticed_Timer").innerHTML = localStorage.getItem("Cadarn_Noticed_Timer"); }
+	if(localStorage.getItem("Amlodd_Noticed_Timer") != null){ document.getElementById("Amlodd_Noticed_Timer").innerHTML = localStorage.getItem("Amlodd_Noticed_Timer"); }
+	if(localStorage.getItem("Trahaearn_Noticed_Timer") != null){ document.getElementById("Trahaearn_Noticed_Timer").innerHTML = localStorage.getItem("Trahaearn_Noticed_Timer"); }
+	if(localStorage.getItem("Hefin_Noticed_Timer") != null){ document.getElementById("Hefin_Noticed_Timer").innerHTML = localStorage.getItem("Hefin_Noticed_Timer"); }
+	if(localStorage.getItem("Crwys_Noticed_Timer") != null){ document.getElementById("Crwys_Noticed_Timer").innerHTML = localStorage.getItem("Crwys_Noticed_Timer"); }
+	if(localStorage.getItem("Meilyr_Noticed_Timer") != null){ document.getElementById("Meilyr_Noticed_Timer").innerHTML = localStorage.getItem("Meilyr_Noticed_Timer"); }
+	if(document.getElementById("Iorwerth_Noticed_Timer").innerHTML != "00:00"){ document.getElementById("Iorwerth_Noticed_Timer").style.color = "red"; window["Iorwerth_Noticed_Timer"] = window.setInterval(function(){ UpdateTimer("Iorwerth_Noticed_Timer", -1) }, 1000); }
+	if(document.getElementById("Ithell_Noticed_Timer").innerHTML != "00:00"){ document.getElementById("Ithell_Noticed_Timer").style.color = "red"; window["Ithell_Noticed_Timer"] = window.setInterval(function(){ UpdateTimer("Ithell_Noticed_Timer", -1) }, 1000); }
+	if(document.getElementById("Cadarn_Noticed_Timer").innerHTML != "00:00"){ document.getElementById("Cadarn_Noticed_Timer").style.color = "red"; window["Cadarn_Noticed_Timer"] = window.setInterval(function(){ UpdateTimer("Cadarn_Noticed_Timer", -1) }, 1000); }
+	if(document.getElementById("Amlodd_Noticed_Timer").innerHTML != "00:00"){ document.getElementById("Amlodd_Noticed_Timer").style.color = "red"; window["Amlodd_Noticed_Timer"] = window.setInterval(function(){ UpdateTimer("Amlodd_Noticed_Timer", -1) }, 1000); }
+	if(document.getElementById("Trahaearn_Noticed_Timer").innerHTML != "00:00"){ document.getElementById("Trahaearn_Noticed_Timer").style.color = "red"; window["Trahaearn_Noticed_Timer"] = window.setInterval(function(){ UpdateTimer("Trahaearn_Noticed_Timer", -1) }, 1000); }
+	if(document.getElementById("Hefin_Noticed_Timer").innerHTML != "00:00"){ document.getElementById("Hefin_Noticed_Timer").style.color = "red"; window["Hefin_Noticed_Timer"] = window.setInterval(function(){ UpdateTimer("Hefin_Noticed_Timer", -1) }, 1000); }
+	if(document.getElementById("Crwys_Noticed_Timer").innerHTML != "00:00"){ document.getElementById("Crwys_Noticed_Timer").style.color = "red"; window["Crwys_Noticed_Timer"] = window.setInterval(function(){ UpdateTimer("Crwys_Noticed_Timer", -1) }, 1000); }
+	if(document.getElementById("Meilyr_Noticed_Timer").innerHTML != "00:00"){ document.getElementById("Meilyr_Noticed_Timer").style.color = "red"; window["Meilyr_Noticed_Timer"] = window.setInterval(function(){ UpdateTimer("Meilyr_Noticed_Timer", -1) }, 1000); }
 }
