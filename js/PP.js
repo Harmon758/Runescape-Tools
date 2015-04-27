@@ -164,3 +164,17 @@ function Load_Session(){
 	if(document.getElementById("Crwys_Noticed_Timer").innerHTML != "00:00"){ document.getElementById("Crwys_Noticed_Timer").style.color = "red"; window["Crwys_Noticed_Timer"] = window.setInterval(function(){ UpdateTimer("Crwys_Noticed_Timer", -1) }, 1000); }
 	if(document.getElementById("Meilyr_Noticed_Timer").innerHTML != "00:00"){ document.getElementById("Meilyr_Noticed_Timer").style.color = "red"; window["Meilyr_Noticed_Timer"] = window.setInterval(function(){ UpdateTimer("Meilyr_Noticed_Timer", -1) }, 1000); }
 }
+
+function Display_Selected_Map(Clan_Location){
+	var Clan = Clan_Location.id.split("_")[0];
+	Clan_Location.style.color = "Yellow";
+	document.getElementById("Prifddinas_Clan_Map").style.visibility = "hidden";
+	document.getElementById("Prifddinas_Clan_Map_" + Clan + "_Selected").style.visibility = "visible";
+}
+
+function Display_Default_Map(Clan_Location){
+	var Clan = Clan_Location.id.split("_")[0];
+	Clan_Location.style.color = "#a9acad";
+	document.getElementById("Prifddinas_Clan_Map").style.visibility = "visible";
+	document.getElementById("Prifddinas_Clan_Map_" + Clan + "_Selected").style.visibility = "hidden";
+}
