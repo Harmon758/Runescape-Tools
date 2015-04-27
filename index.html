@@ -22,7 +22,7 @@
 		</ul>
 	 
 		<div class="tab-content">
-			<div id="tab1" class="tab active" style="height:495px">
+			<div id="tab1" class="tab active" style="height:495px;width:1190px">
 				<table>
 					<tr>
 						<th>Noticed</th>
@@ -41,7 +41,7 @@
 						<td>Iorwerth</td>
 						<td style="text-align:center;">91</td>
 						<td id="Iorwerth_XP">125.0</td>
-						<td>SSW</td>
+						<td id="Iorwerth_Location" onmouseover="Display_Selected_Map(this)" onmouseout="Display_Default_Map(this)">SSW</td>
 						<td style="text-align:center;">No</td>
 						<td style="text-align:center;color:green;" id="Iorwerth_Noticed_Timer">00:00</td>
 					</tr>
@@ -51,7 +51,7 @@
 						<td>Ithell</td>
 						<td style="text-align:center;">92</td>
 						<td id="Ithell_XP">130.0</td>
-						<td>WSW</td>
+						<td id="Ithell_Location" onmouseover="Display_Selected_Map(this)" onmouseout="Display_Default_Map(this)">WSW</td>
 						<td style="text-align:center;">Yes</td>
 						<td style="text-align:center;color:green" id="Ithell_Noticed_Timer">00:00</td>
 					</tr>
@@ -61,7 +61,7 @@
 						<td>Cadarn</td>
 						<td style="text-align:center;">93</td>
 						<td id="Cadarn_XP">135.0</td>
-						<td>ESE</td>
+						<td id="Cadarn_Location" onmouseover="Display_Selected_Map(this)" onmouseout="Display_Default_Map(this)">ESE</td>
 						<td style="text-align:center;">No</td>
 						<td style="text-align:center;color:green" id="Cadarn_Noticed_Timer">00:00</td>
 					</tr>
@@ -71,7 +71,7 @@
 						<td>Amlodd</td>
 						<td style="text-align:center;">94</td>
 						<td id="Amlodd_XP">140.0</td>
-						<td>WNW</td>
+						<td id="Amlodd_Location" onmouseover="Display_Selected_Map(this)" onmouseout="Display_Default_Map(this)">WNW</td>
 						<td style="text-align:center;">No</td>
 						<td style="text-align:center;color:green" id="Amlodd_Noticed_Timer">00:00</td>
 					</tr>
@@ -81,7 +81,7 @@
 						<td>Trahaearn</td>
 						<td style="text-align:center;">95</td>
 						<td id="Trahaearn_XP">145.0</td>
-						<td>SSE</td>
+						<td id="Trahaearn_Location" onmouseover="Display_Selected_Map(this)" onmouseout="Display_Default_Map(this)">SSE</td>
 						<td style="text-align:center;">Yes</td>
 						<td style="text-align:center;color:green" id="Trahaearn_Noticed_Timer">00:00</td>
 					</tr>
@@ -91,7 +91,7 @@
 						<td>Hefin</td>
 						<td style="text-align:center;">96</td>
 						<td id="Hefin_XP">150.0</td>
-						<td>NNW</td>
+						<td id="Hefin_Location" onmouseover="Display_Selected_Map(this)" onmouseout="Display_Default_Map(this)">NNW</td>
 						<td style="text-align:center;">Yes</td>
 						<td style="text-align:center;color:green" id="Hefin_Noticed_Timer">00:00</td>
 					</tr>
@@ -101,7 +101,7 @@
 						<td>Crwys</td>
 						<td style="text-align:center;">97</td>
 						<td id="Crwys_XP">155.0</td>
-						<td>ENE</td>
+						<td id="Crwys_Location" onmouseover="Display_Selected_Map(this)" onmouseout="Display_Default_Map(this)">ENE</td>
 						<td style="text-align:center;">Yes</td>
 						<td style="text-align:center;color:green" id="Crwys_Noticed_Timer">00:00</td>
 					</tr>
@@ -111,13 +111,20 @@
 						<td>Meilyr</td>
 						<td style="text-align:center;">98</td>
 						<td id="Meilyr_XP">170.0</td>
-						<td>NNE</td>
+						<td id="Meilyr_Location" onmouseover="Display_Selected_Map(this)" onmouseout="Display_Default_Map(this)">NNE</td>
 						<td style="text-align:center;">Yes</td>
 						<td style="text-align:center;color:green" id="Meilyr_Noticed_Timer">00:00</td>
 					</tr>
 				</table>
-				<img src="images/Prifddinas_Clan_Map.png" alt="Prifddinas Clan Map" style="float:right;width:500px;padding-left:40px">
-				<br>
+				<img src="images/Prifddinas_Clan_Map.png" alt="Prifddinas Clan Map" id="Prifddinas_Clan_Map" style="visibility:visible;width:500px;position:absolute;left:710px;top:155px">
+				<img src="images/Prifddinas_Clan_Map_Iorwerth_Selected.png" alt="Prifddinas Clan Map With Iorwerth Selected" id="Prifddinas_Clan_Map_Iorwerth_Selected" style="visibility:hidden;width:500px;position:absolute;left:710px;top:155px">
+				<img src="images/Prifddinas_Clan_Map_Ithell_Selected.png" alt="Prifddinas Clan Map With Ithell Selected" id="Prifddinas_Clan_Map_Ithell_Selected" style="visibility:hidden;float:right;width:500px;position:absolute;left:710px;top:155px">
+				<img src="images/Prifddinas_Clan_Map_Cadarn_Selected.png" alt="Prifddinas Clan Map With Cadarn Selected" id="Prifddinas_Clan_Map_Cadarn_Selected" style="visibility:hidden;float:right;width:500px;position:absolute;left:710px;top:155px">
+				<img src="images/Prifddinas_Clan_Map_Amlodd_Selected.png" alt="Prifddinas Clan Map With Amlodd Selected" id="Prifddinas_Clan_Map_Amlodd_Selected" style="visibility:hidden;float:right;width:500px;position:absolute;left:710px;top:155px">
+				<img src="images/Prifddinas_Clan_Map_Trahaearn_Selected.png" alt="Prifddinas Clan Map With Trahaearn Selected" id="Prifddinas_Clan_Map_Trahaearn_Selected" style="visibility:hidden;float:right;width:500px;position:absolute;left:710px;top:155px">
+				<img src="images/Prifddinas_Clan_Map_Hefin_Selected.png" alt="Prifddinas Clan Map With Hefin Selected" id="Prifddinas_Clan_Map_Hefin_Selected" style="visibility:hidden;float:right;width:500px;position:absolute;left:710px;top:155px">
+				<img src="images/Prifddinas_Clan_Map_Crwys_Selected.png" alt="Prifddinas Clan Map With Crwys Selected" id="Prifddinas_Clan_Map_Crwys_Selected" style="visibility:hidden;float:right;width:500px;position:absolute;left:710px;top:155px">
+				<img src="images/Prifddinas_Clan_Map_Meilyr_Selected.png" alt="Prifddinas Clan Map With Meilyr Selected" id="Prifddinas_Clan_Map_Meilyr_Selected" style="visibility:hidden;float:right;width:500px;position:absolute;left:710px;top:155px">
 				Ibis Pieces: <select id="Ibis_Pieces" onchange="Recalculate_XP()">
 					<option value="0">0</option>
 					<option value="1">1</option>
